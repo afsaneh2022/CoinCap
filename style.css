@@ -1,0 +1,463 @@
+
+ @import "/theme.css"; 
+
+ *, *::after, *::before{
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Lato,"Helvetica Neue",Arial,Helvetica,sans-serif;
+    height: auto;
+    background-color:var(--main-background);
+ }
+
+a{
+  text-decoration: none;
+  font-size: var(--font-text);
+  }
+
+  
+a:hover{
+  color:var(--hovered_link);
+  
+  }
+/*  ----------    public style  for pages ---------------- */
+
+  .container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .details1{
+    max-width: 1120;
+  }
+  
+  .details2{
+    max-width: 1096;
+  }
+/* -------------------------------------- */
+/*                   button               */
+/* -------------------------------------- */
+
+
+.button{
+  padding: 11px 26px;
+  border-radius: 34px;
+  color: var(--background_light_main);
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 15px -3px;
+}
+
+.button-primary{
+   background-color: var(--button_light_primary); 
+  color:var(--nav-background);
+}
+.button-primary:hover{
+  transform: translatey(-2px);
+  scale: .03s;
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 15px -3px;
+  /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+  color:var(--nav-background);
+}
+
+ /* ---------------- navigation fix position---------------------- */
+
+nav{
+  width:100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  background-color:var(--nav-background);
+  box-shadow: 10px 1px 5px var(--shadow);
+  }
+ 
+  .links{
+    display: inline-block;
+  }
+  .links a{
+    padding: 13px 16px 13px 8px;
+    color:var(--text-color-light);
+  }
+  .links a:hover{
+   background-color: var(--back-shadow);
+  }
+  .icon{
+    width: 18px;
+    height: 18px;
+  }
+  .logo-name{
+    width: 100%px;
+    height: 100%px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration:underline
+  }
+  
+  .logo-name p{
+    margin:2px;
+    color: var(--shadow);
+    font-size: 12px;
+  }
+  .logo{
+    width:30px;
+    height:30px;
+    margin: 1px 6px 1px 0px;
+  }
+  .center-head{
+    width: 10%;
+    height: 100%;
+     
+  }
+  
+  .right-head{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+  }
+/* ----------     banner  and footer  gradient blue Background -------------*/
+.banner  {
+  width: 100%;
+  height:15%;
+  padding: 20px 20px 10rem 20px ;
+  background:var(--banner-background);
+  margin-top: 3%;    
+  }
+
+.footer{
+  width: 100%;
+  height:45%;
+  margin-top: 2% ; 
+  padding: 0px 20px 10rem 20px ;
+  margin-bottom: 0px;
+  background:var(--banner-background);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.footer-column{
+    width: 25%;
+    height: 100px;
+    padding: 2px 16px;
+    color:var( --text-color-dark);
+    display: flex;
+    flex-direction: column;
+}
+.footer-column a{
+  color:var(--text-color-dark-a);
+}
+.footer-column a:hover{
+  color:var(--text-color-dark);
+}
+.footer-column h4{
+  padding-bottom: 0px;
+}
+
+.footer-column h5{
+  color:var(--text-color-dark-a);
+  margin: 0px;
+  
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: flex-start;
+}
+  .banner-column{
+    width: auto;
+    height: 30%;
+    padding: 20px 16px;
+    color:var( --text-color-dark);
+  }
+  .banner-column .lable{
+    font-size:var(--font-text) ;
+    padding: 4px 12px ;
+    text-transform:uppercase;
+    font-weight: 700px;
+    text-align: center;
+
+  }
+  
+  .banner-column .value{   
+    font-size:var(--font-number) ;
+    padding: 2px 12px;
+    text-align: center;
+  }
+  .view-more{
+    text-align: center;
+    margin: auto;
+    margin-top: 1%;
+  }
+ /*   --------------   main table   from  java -----------   */
+  .table-list{
+    margin-top: -5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-background);
+    box-shadow: 1px 1px var(--shadow), -.1em 0 .1em var(--shadow);
+    border-bottom-style: inset;
+    border-radius: 5px 0px 0px 0px ;
+  }
+  .list-row{
+    display: block;
+    padding: 16px;
+  }
+  .table-head {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
+
+    }
+ .trow{
+   height: 60px;
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid var(--border-color);
+ }
+ .trow:hover{
+  background-color: var(--back-shadow);
+ }
+ .trow-align{
+  width:12% ;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+ }
+ .asending::after{
+  content:"";
+  width: 10px;
+  height:10px;
+  background: url(./logo/arrow_bottomdown.svg);
+  margin:4px 0px 0px 10px;
+ }
+ .trow-align2{
+  width: 16%;
+ }
+.text-green {
+  color:#18c683;
+}
+  
+.text-red {
+  color: #f44336;
+}
+.circle{
+  width:12px;
+  height:12px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  text-align: center;
+}
+ .circle-green{
+  background-color: #18c683;
+ }
+ .circle-red{
+  background-color: #f44336;
+ }
+ .logo-google-apple{
+  box-shadow: transparent; 
+ }
+ 
+
+
+/* ----------------(coins)--Bitcoin.Html------------------------- */
+.banner_coins{
+padding: 20px 0px  ;
+display: flex;
+width: 100%;
+
+    }
+    .details_coins{
+      display: flex;
+      width:50%;
+      
+    }
+          .details_coins_rank{
+            width:30%;
+          
+          }
+          .green-box{
+            width: 58px;
+            height: 90px;
+            padding: 0px;
+            text-align: center;
+            background-color:var(--button_light_primary) ;
+            border-radius: 0px 0px 12px 12px;
+            position: relative;
+          }
+          .green-box::before{
+            content: "";
+            width: calc(100% + 20px);
+            height: 10px;
+            background: var(--button_light_primary) ;
+            left: -10px; 
+            top: 0px;
+            border-radius: 8px;
+            position: absolute;
+          }
+          .green-box h1{
+            margin: 0px;
+            padding: 16px 0px 12px 0px;
+            font-size: 32px;
+            color:#fff;
+        
+          }
+          .green-box p{
+            margin: 0px;
+            padding: 0px;
+            font-size: 10px;
+            color:#fff;
+          }
+          .details_coins_price{
+            display: flex;
+            flex-direction: column;
+            width:70%;
+            margin: 0px;
+            text-align:start ;          
+          }
+          .details_coins_price h1{
+             margin: 0px;
+             padding: 12px;
+             color: #ffffff;
+            }
+          .details_coins_price_down{
+            display: flex;
+            justify-content: flex-start;
+            margin: 0px;
+
+          }
+          .details_coins_price_down h2,h3{
+           padding: 0px 12px;  
+           margin: 0px;
+          color:#ffffff;
+          }
+
+    .market-coins{
+      width:50%;
+      display: flex;
+      flex-direction: column;
+      color:#ffffff;
+    }
+          .market-coins-row{
+            display: flex;
+            padding: 8px;
+            margin: 0px;
+            justify-content: space-between;
+          }
+          .market-coins-culomn{
+            display:block ;
+             
+          }
+          .market-coins-culomn h3{
+            margin: 0px;
+            padding-left: 0px;
+          }
+/* ------------------------------- Chart && Swap----------------------- */
+.chart-swap{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  background-color: #fff;
+ 
+}
+.chart{
+  width: 70%;
+  display:flex;
+  flex-direction: column;
+}
+.chart-head{
+  height: 20%;
+  display: flex;
+}
+.chart-head-culomn , .chart-head-culomn2{
+  width: 50%;
+  display: flex;
+}
+.chart-head-culomn {
+  justify-content: flex-start;
+}
+.chart-head-culomn2 {
+  justify-content:space-between;
+}
+.chart-head-culomn2 span{
+  padding-right: 8px;
+  color:grey;
+}
+.chart-logo{
+  width: 30%;
+ text-align: center;
+ padding: 24px;
+
+}
+
+
+.chart-main{
+  height: 80%;
+  background-color: aqua;
+}
+
+
+.swap{
+  width: 30%;
+  background-color: green;
+}
+.swap-box{
+  width: 80%;
+  height: 80%;
+  background-color: yellow;
+  margin:48px 32px;
+  border-radius: 24px;
+}
+
+
+/* --------------------------------------------------------------------- */
+/* 8888888888888888888888 */
+ .input-search{
+  background-color: red;
+  /* visibility: hidden; */
+ }
+
+ .div1{
+width:200px;
+height:30px;
+border: 2px solid red;
+
+ }
+
+/* ------------------------------------------------------------------ */
+/*                          REsponsive                                */
+/* ------------------------------------------------------------------ */
+
+
+
+@media screen and (max-width: 768px) {
+  .details{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  .details2{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .container{
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+
+
+}
+

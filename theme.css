@@ -1,0 +1,15 @@
+body {
+    
+    --nav-background:#ffff;
+    --shadow:#728a96;
+    --main-background:rgb(236, 239, 241);
+    --banner-background:linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246));;
+    --font-text:14px;
+    --font-number:21px;
+    --text-color-light:#000000DE;
+    --text-color-dark:#ffff;;
+    --back-shadow:#f4f7f8;
+    --button_light_primary:#18c683;
+    --text-color-dark-a:rgb(245,245,245,.6);
+    --border-color:rgba(0,0,0,.1);
+   }
