@@ -91,6 +91,10 @@ nav{
     width: 18px;
     height: 18px;
   }
+  .chart-icon{
+    width:32px;
+    height: 32px;
+  }
   .logo-name{
     width: 100%px;
     height: 100%px;
@@ -227,6 +231,7 @@ nav{
  .trow:hover{
   background-color: var(--back-shadow);
  }
+
  .trow-align{
   width:12% ;
   text-align: center;
@@ -276,6 +281,7 @@ padding: 20px 0px  ;
 display: flex;
 width: 100%;
 
+
     }
     .details_coins{
       display: flex;
@@ -293,7 +299,8 @@ width: 100%;
             text-align: center;
             background-color:var(--button_light_primary) ;
             border-radius: 0px 0px 12px 12px;
-            position: relative;
+             position: relative;  
+
           }
           .green-box::before{
             content: "";
@@ -303,7 +310,7 @@ width: 100%;
             left: -10px; 
             top: 0px;
             border-radius: 8px;
-            position: absolute;
+            position: absolute; 
           }
           .green-box h1{
             margin: 0px;
@@ -371,7 +378,7 @@ width: 100%;
  
 }
 .chart{
-  width: 70%;
+  width: 65%;
   display:flex;
   flex-direction: column;
 }
@@ -403,23 +410,61 @@ width: 100%;
 
 .chart-main{
   height: 80%;
-  background-color: aqua;
+  background-color: #ffffff;
 }
 
 
 .swap{
-  width: 30%;
-  background-color: green;
+  width: 35%;
+  background-color: var(--main-background);
+  
 }
 .swap-box{
   width: 80%;
   height: 80%;
-  background-color: yellow;
+  background-color: #ffffff;
   margin:48px 32px;
-  border-radius: 24px;
+  border-radius: 48px;
+  color:var( --text-color-light);
+  /* border:1px solid var(--border-color); */
 }
-
-
+.swap-box_row{
+  height: 20%;
+  text-align: center;
+ display: flex;
+ justify-content: space-between;
+ background-color: #ffffff;
+ 
+ align-content: center;
+}
+.button_swap{
+  width: 100%;
+  height: auto;
+  padding: 0px 48px;
+  display: block;
+  margin: 12px 0px;
+  text-align: center;
+}
+.Swap-align{
+  text-align: center;
+  margin-top: 20px;
+  padding: 0px 20px;
+}
+.swap-box_row_sell_get{
+   border:1px solid var(--border-color); 
+   background-color: var(--back-shadow);
+   margin: 0px 15px;
+   display: flex;
+   
+  
+   border-radius: 24px;
+  }
+  .btn-wallet{
+    width: 100%;
+  }
+  .sell-get{
+    padding: 6px 12px;
+  }
 /* --------------------------------------------------------------------- */
 /* 8888888888888888888888 */
  .input-search{
@@ -435,7 +480,7 @@ border: 2px solid red;
  }
 
 /* ------------------------------------------------------------------ */
-/*                          REsponsive                                */
+/*                          Responsive                                */
 /* ------------------------------------------------------------------ */
 
 

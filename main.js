@@ -1,6 +1,7 @@
 
 let fech_coin =[];
-
+var click_link="#";
+var coin_click_name="";
 let table_body=document.querySelector(".tbody");
 
 //  Rendering  coin page 
@@ -20,11 +21,11 @@ function render_coin(asset){
     let base=document.createElement("a");
         base.classList.add("logo-name");
         base.classList.add("trow-align2");
-        base.setAttribute("href","#");
+        base.setAttribute("href","./coinsdetail.html");
       
     let image_logo=document.createElement("img");
         image_logo.classList.add("logo");
-        //  let image_name="./logo/"+asset.symbol+"@2x.png";
+        //let image_name="./logo/"+asset.symbol+"@2x.png";
         let img_str="";
         img_str=asset.symbol.toLowerCase();
         let image_name="https://assets.coincap.io/assets/icons/"+img_str+"@2x.png";
@@ -32,8 +33,8 @@ function render_coin(asset){
 
     let base_id_span=document.createElement("span");
         base_id_span.textContent=asset.name;
-     
-
+        coin_click_name=asset.name.toLowerCase();
+      
     let base_id_p=document.createElement("p");    
         base_id_p.textContent=asset.symbol;
 
@@ -137,6 +138,15 @@ click_rank.addEventListener("click", function sort_rank( ){
        });
 
   });
+
+ let click_row_coin=document.querySelector(".trow-align") ;
+
+ click_row_coin.addEventListener("click",function coin_details(){
+    click_link=`https://api.coincap.io/v2/assets/${coin_click_name}/history?interval=d1`
+
+    console.log("horaaaa");
+    console.log(click_link);
+ });
 
 
 

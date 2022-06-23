@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,11 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <link href="./style.css" rel="stylesheet" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
-   
-<!-- 
+    <!-- 
  --------------------------------------------------------------- 
                         Navigation                                      
  ---------------------------------------------------------------   -->
@@ -24,8 +24,8 @@
     <div class="container details2">
     
               <div class="links">
-                <a href="http://127.0.0.1:5501/index.html"> Coins</a>
-                <a href="http://127.0.0.1:5501/Exchanges.html">Exchanges</a>
+                <a href="./index.html"> Coins</a>
+                <a href="./Exchanges.html">Exchanges</a>
                 <a href="#">Swap</a>
               </div>
               <section  class="center-head">
@@ -87,7 +87,7 @@
                     <span class="market-coins-culomn  value"> <h3>$416.58b</h3></span>
                 </div>
                 <div>Supply</div>
-            </div>
+                </div>
             <div  class="market-coins-row">
                  
                 <span > <a href="#" class="button button-primary ">Website </a></span>
@@ -151,18 +151,43 @@
 
             </div>
                 <!-----------------------Main Chart-----------------------  -->
-            <div  clas="chart-main" >  
-             
+            <div  class="chart-main" >  
+
+                <canvas id="myChart" width="800" height="450"></canvas>
                  
             </div>
-
+   
        
         </div>     <!-----------End of  left -------  -->
 
        
         <div class="swap"> <!--------------right Panel -----  -->
-             <div  class="swap-box"></div>
+             <div  class="swap-box">
+               <div class="swap-box_row"> 
+                    <h2 class="Swap-align"> Swap </h2>
+                    <span  class="Swap-align">  <a href="#"><img src="/logo/setting.png"   class="chart-icon "/> </a></span>
 
+               </div>
+                <div  class="swap-box_row swap-box_row_sell_get"> 
+                <div class="sell-get"> You Sell  </div>    
+                <div>  <a href="#"><img src="./logo/eth@2x.png"   class="chart-icon "/> ETH </a></span> </div>
+                
+                </div>
+                <div  class="swap-box_row"> <span  class="Swap-align">  <a href="#"><img src="./logo/shuffle.svg"   class="chart-icon "/> </a></span> </div>
+                <div  class="swap-box_row swap-box_row_sell_get sell-get"> You Get
+                    <a href="#"> Select a token </a>
+
+                </div>
+                <div class="swap-box_row" >  
+
+                     <span class="btn-wallet" ><a href="#" class="button button-primary "><h3 class="button_swap">   Connect Wallet   </h3>  </a>  </span>
+                </div> 
+
+
+
+
+             </div>
+                   
 
 
 
@@ -174,3 +199,13 @@
 
 <!-- -------------  -->
     </div>
+    <script  src="./coinsdetail.js"></script> 
+    <script  src="./public.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
