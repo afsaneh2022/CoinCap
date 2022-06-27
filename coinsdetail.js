@@ -1,13 +1,83 @@
+
+//  --------------------------------------
  
  let params = new URLSearchParams(document.location.search);
 
- let coin_name = params.get("=");
- console.log(params.toString());
- console.log(coin_name);
-coin_name="bitcoin"
+ let coin_name = params.get("coin");
+
+ 
 function coin_url(name) {
   return `https://api.coincap.io/v2/assets/${name}/history?interval=d1`;
 }
+
+
+function coin_dtl(name) {
+  return `https://api.coincap.io/v2/assets/${name}`;
+}
+
+
+async function get_coin_dtl(){
+  let dtl=coin_dtl(coin_name);
+  let respons=await fetch(dtl);
+  let json=await respons.json();
+
+  let data = json.data;
+  return data;
+}
+
+get_coin_dtl().then( (element)=>{
+  let valu= element;
+  console.log(valu);
+  render_coin_dtl(valu);
+});
+
+// --------------------------------
+
+function render_coin_dtl(asset){
+  
+  //   Rank 
+      let rank=document.querySelector(".details_coins_rank .green-box h1");
+          rank.textContent= asset.rank;
+      let base=document.querySelector(".details_coins_price h1");
+        
+         let coin_dt=asset.name+ "(" +asset.symbol + ")";
+         base.textContent=coin_dt;
+        
+      let  price=document.querySelector(".details_coins_price_down  h2");
+           price.textContent="$"+round(asset.priceUsd);
+        
+        
+      let  percent=document.querySelector(".details_coins_price_down  h3");
+            percent.textContent=round(asset.changePercent24Hr);
+      
+
+      let market=document.querySelector(".market-m");
+          market.textContent="$"+separate_symbol(asset.marketCapUsd);
+
+      let Volume=document.querySelector(".volume-coin");
+        Volume.textContent="$"+separate_symbol(asset.volumeUsd24Hr);
+      
+
+        let suply=document.querySelector(".Supply");
+            suply.textContent=separate_symbol(asset.supply)+" "+ asset.symbol;
+      
+        let image_logo=document.querySelector(".chat-logo-img");
+        
+        let img_str="";
+        img_str=asset.symbol.toLowerCase();
+        let image_name="https://assets.coincap.io/assets/icons/"+img_str+"@2x.png";
+        image_logo.setAttribute("src",image_name);
+
+      let head_name=document.querySelector(".head-chart-coin-name");
+          head_name.textContent=asset.name;
+        
+
+
+    }
+
+  
+// --------------------------------
+
 
 async function get_coin() {
   let url = coin_url(coin_name);
@@ -48,8 +118,3 @@ get_coin().then(function (values) {
     options: { Values: values.y },
   });
 });
-
-// let a =document.querySelector(".btn");
-//   a.addEventListener("click",()=>{
-//   console.log("horaaaaaa");
-// })

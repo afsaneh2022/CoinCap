@@ -21,8 +21,9 @@ function render_coin(asset){
     let base=document.createElement("a");
         base.classList.add("logo-name");
         base.classList.add("trow-align2");
-        base.setAttribute("href","./coinsdetail.html");
-      
+        coin_click_name=asset.name.toLowerCase();
+        base.setAttribute("href",`/coinsdetail.html?coin=${coin_click_name}`);
+       
     let image_logo=document.createElement("img");
         image_logo.classList.add("logo");
         //let image_name="./logo/"+asset.symbol+"@2x.png";
@@ -33,7 +34,7 @@ function render_coin(asset){
 
     let base_id_span=document.createElement("span");
         base_id_span.textContent=asset.name;
-        coin_click_name=asset.name.toLowerCase();
+        
       
     let base_id_p=document.createElement("p");    
         base_id_p.textContent=asset.symbol;
@@ -149,5 +150,14 @@ click_rank.addEventListener("click", function sort_rank( ){
  });
 
 
+//  let open_btn = document.querySelector(".open");
+//       let close_btn = document.querySelector(".close");
+//       let modal = document.querySelector(".modal");
 
+//       function toggle_modal() {
+//         modal.classList.toggle("show");
+//       }
+
+//       open_btn.addEventListener("click", toggle_modal);
+//       close_btn.addEventListener("click", toggle_modal);
 
