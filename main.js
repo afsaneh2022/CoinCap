@@ -1,6 +1,6 @@
 
 let fech_coin =[];
-var click_link="#";
+
 var coin_click_name="";
 let table_body=document.querySelector(".tbody");
 
@@ -140,24 +140,4 @@ click_rank.addEventListener("click", function sort_rank( ){
 
   });
 
- let click_row_coin=document.querySelector(".trow-align") ;
-
- click_row_coin.addEventListener("click",function coin_details(){
-    click_link=`https://api.coincap.io/v2/assets/${coin_click_name}/history?interval=d1`
-
-    console.log("horaaaa");
-    console.log(click_link);
- });
-
-
-//  let open_btn = document.querySelector(".open");
-//       let close_btn = document.querySelector(".close");
-//       let modal = document.querySelector(".modal");
-
-//       function toggle_modal() {
-//         modal.classList.toggle("show");
-//       }
-
-//       open_btn.addEventListener("click", toggle_modal);
-//       close_btn.addEventListener("click", toggle_modal);
-
+ 
