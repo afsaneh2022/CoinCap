@@ -21,7 +21,7 @@ function render_coin(asset){
     let base=document.createElement("a");
         base.classList.add("logo-name");
         base.classList.add("trow-align2");
-        coin_click_name=asset.name.toLowerCase();
+        coin_click_name=asset.id;
         base.setAttribute("href",`/coinsdetail.html?coin=${coin_click_name}`);
        
     let image_logo=document.createElement("img");

@@ -5,7 +5,7 @@
 
  let coin_name = params.get("coin");
 
- 
+ console.log(coin_name);
 function coin_url(name) {
   return `https://api.coincap.io/v2/assets/${name}/history?interval=d1`;
 }
@@ -27,7 +27,7 @@ async function get_coin_dtl(){
 
 get_coin_dtl().then( (element)=>{
   let valu= element;
-  console.log(valu);
+
   render_coin_dtl(valu);
 });
 
